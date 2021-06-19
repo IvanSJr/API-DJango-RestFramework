@@ -65,11 +65,12 @@ class CursoViewSet(viewsets.ModelViewSet):
     serializer_class = AvaliacaoSerializer"""
 
 
-class AvaliacaoViewSet(  # mixins.ListModelMixin,
-    mixins.CreateModelMixin,
-    mixins.RetrieveModelMixin,
-    mixins.UpdateModelMixin,
-    mixins.DestroyModelMixin,
-    viewsets.GenericViewSet):
+class AvaliacaoViewSet(
+        # mixins.ListModelMixin,
+        mixins.CreateModelMixin,
+        mixins.RetrieveModelMixin,
+        mixins.UpdateModelMixin,
+        mixins.DestroyModelMixin,
+        viewsets.GenericViewSet):
     queryset = Avaliacao.objects.all()
     serializer_class = AvaliacaoSerializer
